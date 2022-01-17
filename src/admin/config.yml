@@ -21,15 +21,19 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
-      - { label: "Author", name: "author", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - {
+          label: "Image",
+          name: "thumbnail",
+          widget: "image",
+          choose_url: false,
+        }
       - widget: select
         label: "tags"
         name: "tags"
         multiple: true
         create: true
-        options: ["Tags", "created", "from", "config.yml"]
+        options: ["pets", "art", "family"]
   - label: "Settings"
     name: "settings"
     editor:
