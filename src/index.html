@@ -6,7 +6,7 @@ path: home
 ---
 
 <div
-  class="container mx-auto lg:h-screen flex flex-col justify-center items-center"
+  class="container mx-auto lg:h-screen flex flex-col justify-center items-center px-4"
 >
   <h1>
     <strong
@@ -18,38 +18,28 @@ path: home
 
   <p>{{settings.description}}</p>
 
-  <section class="container mt-15 w-full grid grid-cols-4">
+  <section class="container mt-15 w-full grid grid-cols-1 lg:grid-cols-3">
     {% set postslist = collections.post %} {% for post in postslist | reverse %}
-    <article class="my-8 bg-gray-50 rounded-md shadow-md">
-      <img
-        src="{{ post.data.thumbnail | url }}"
-        alt="{{post.data.title}}"
-        class="object-cover"
-      />
-      <div class="p-4">
-        <h2 class="font-bold text-3xl text-gray-900 mb-2">
-          <a href="{{ post.url | url }}">
+    <div
+      class="my-8 bg-gray-50 rounded-md shadow-md transform transition duration-200 ease-in-out hover:scale-105"
+    >
+      <a href="{{ post.url | url }}">
+        <img
+          src="{{ post.data.thumbnail | url }}"
+          alt="{{post.data.title}}"
+          class="object-cover"
+        />
+        <div class="p-4">
+          <h2 class="font-bold text-3xl text-gray-900 mb-2">
             {% if post.data.title %} {{ post.data.title }} {% else %} - {% endif
             %}
-          </a>
-        </h2>
-        <p class="text-base leading-6 text-gray-500 mb-3">
-          <time> {{ post.date | readableDate }} </time>
-        </p>
-        {% if post.data.description %}
-        <p class="text-lg text-gray-500 mb-3">{{ post.data.description }}</p>
-        {% endif %}
-
-        <p>
-          <a
-            href="{{ post.url | url }}"
-            class="text-indigo-500 font-bold text-lg"
-          >
-            View Quilt →
-          </a>
-        </p>
-      </div>
-    </article>
+          </h2>
+          <p class="text-base leading-6 text-gray-500 mb-3">
+            <time> {{ post.date | readableDate }} </time>
+          </p>
+        </div>
+      </a>
+    </div>
     {% endfor %}
   </section>
 </div>
