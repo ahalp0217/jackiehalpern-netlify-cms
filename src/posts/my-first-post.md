@@ -2,7 +2,7 @@
 title: "Quilt #1 "
 description: Hello World
 author: Surjith S M
-date: 2020-09-01
+date: 2022-01-17T19:39:41.600Z
 thumbnail: /static/img/2_dogs-2.jpg
 tags:
   - pets
