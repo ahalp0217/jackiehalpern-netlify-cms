@@ -16,18 +16,18 @@ path: home
     </strong>
   </h1>
 
-  <p>{{settings.description}}</p>
+  <p class="pt-4 pb-4">{{settings.description}}</p>
 
-  <section class="container mt-15 w-full grid grid-cols-1 lg:grid-cols-3">
+  <section class="container mt-15 w-full grid grid-cols-1 lg:grid-cols-3 gap-4">
     {% set postslist = collections.post %} {% for post in postslist | reverse %}
     <div
-      class="my-8 bg-gray-50 rounded-md shadow-md transform transition duration-200 ease-in-out hover:scale-105"
+      class="bg-gray-50 rounded-md shadow-md transform transition duration-200 ease-in-out hover:scale-105"
     >
       <a href="{{ post.url | url }}">
         <img
           src="{{ post.data.thumbnail | url }}"
           alt="{{post.data.title}}"
-          class="object-cover"
+          class="object-cover max-h-64 w-full"
         />
         <div class="p-4">
           <h2 class="font-bold text-3xl text-gray-900 mb-2">
