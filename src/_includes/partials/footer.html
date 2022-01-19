@@ -2,24 +2,17 @@
   class="{{ 'fixed' if path == 'home' }} text-center py-4 w-full bg-white border-t border-gray-100"
 >
 
-<<<<<<< HEAD
 <div class="flex justify-center pb-4">
+  <div> 
     {% set catslist = collections.cats %} {% for cat in catslist | reverse %}
-=======
-<div class="flex justify-center pb-4">.
- 
-    {% set catslist = collections.cats %} {% for cat in catslist | reverse %}
-    <h1>hello</h1>
-
->>>>>>> Add cats
         <img
-        src="{{cat.photo}}"
+        src="{{cat.data.photo}}"
         class="rounded-full w-16 h-16 mx-2 object-cover"
     />
     {% endfor %}
   </div>
   <small class="text-gray-500"></small>
-    Follow me on 
+    Follow me on  &nbsp;
     <a href="https://www.instagram.com/quiltsandcats18/" target="_blank" class="underline underline-offset-4 text-blue-600 hover:text-blue-800 visited:text-purple-600">Instagram 🐱</a>
   </small>
 </footer>
