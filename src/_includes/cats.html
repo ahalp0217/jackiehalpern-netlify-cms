@@ -1,23 +1,58 @@
----
-layout: default
-prism: true
----
-
-<div class="container max-w-4xl mt-6 px-6">
-  <div class="pb-5 mb-5">
-    <h1 class="font-bold text-5xl">{{title}}</h1>
-    <div class="flex items-center">
-      <a
-        href="/"
-        class="text-white font-bold text-md bg-indigo-500 p-2 pl-4 pr-4 rounded-md"
-        >View All Quilts
-      </a>
-    </div>
-    <img
-      src="{{photo}}"
-      alt="{{post.data.title}}"
-      class="object-cover mt-4 w-full"
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}}</title>
+    {% if description %}
+    <meta name="description" content="{{description}}" />
+    {% endif %} {% block head %}{% endblock %}
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+    {% if prism == true %}
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/prism-tomorrow.css"
     />
-    <article class="prose prose-lg">{{ description | safe }}</article>
-  </div>
-</div>
+    {% endif %}
+
+    <meta property="og:image" content="{{thumbnail}}" />
+  </head>
+  <body>
+    {% include "./partials/navbar.html" %}
+    <div class="container max-w-4xl mt-6 px-6">
+      <div class="pb-5 mb-5">
+        <h1 class="font-bold text-5xl">{{title}}</h1>
+        <div class="flex items-center">
+          <a
+            href="/"
+            class="text-white font-bold text-md bg-indigo-500 p-2 pl-4 pr-4 rounded-md"
+            >View All Quilts
+          </a>
+        </div>
+        <img
+          src="{{photo}}"
+          alt="{{post.data.title}}"
+          class="object-cover mt-4 w-full"
+        />
+        <p class="text-base leading-6 text-4xl text-gray-700 pt-4">
+          {{ description | safe }}
+        </p>
+      </div>
+    </div>
+
+    {% include "./partials/footer.html" %}
+
+    <script src="/static/js/alpine.js"></script>
+
+    {% if path == "home" %}
+    <!-- Netlify Identity Widget -->
+    <!-- Needed only if you are using Netlify Identity feature -->
+    <script
+      type="text/javascript"
+      src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+    ></script>
+    {% endif %}
+  </body>
+</html>

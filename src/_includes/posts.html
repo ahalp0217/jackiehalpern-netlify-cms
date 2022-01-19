@@ -1,27 +1,64 @@
----
-layout: default
-prism: true
----
-
-<div class="container max-w-4xl mt-6 px-6">
-  <div class="pb-5 mb-5">
-    <h1 class="font-bold text-5xl">{{title}}</h1>
-    <div class="flex items-center">
-      <a
-        href="/"
-        class="text-white font-bold text-md bg-indigo-500 p-2 pl-4 pr-4 rounded-md"
-        >View All Quilts
-      </a>
-    </div>
-    <img
-      src="{{thumbnail}}"
-      alt="{{post.data.title}}"
-      class="object-cover pt-4 pb-4"
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}}</title>
+    {% if description %}
+    <meta name="description" content="{{description}}" />
+    {% endif %} {% block head %}{% endblock %}
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+    {% if prism == true %}
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/prism-tomorrow.css"
     />
-    <p class="text-center text-base leading-6 font-medium text-gray-500">
-      <time> {{ date | readableDate }} </time>
-    </p>
-    <p class="text-base leading-6 text-4xl text-gray-500">{{description}}</p>
-  </div>
-  <article class="prose lg:prose-xl my-4 mx-auto">{{ content | safe }}</article>
-</div>
+    {% endif %}
+
+    <meta property="og:image" content="{{thumbnail}}" />
+  </head>
+  <body>
+    {% include "./partials/navbar.html" %}
+
+    <div class="container max-w-4xl mt-6 px-6">
+      <div class="pb-5 mb-5">
+        <h1 class="font-bold text-5xl">{{title}}</h1>
+        <div class="flex items-center">
+          <a
+            href="/"
+            class="text-white font-bold text-md bg-indigo-500 p-2 pl-4 pr-4 rounded-md"
+            >View All Quilts
+          </a>
+        </div>
+        <img
+          src="{{thumbnail}}"
+          alt="{{post.data.title}}"
+          class="object-cover pt-4 pb-4"
+        />
+        <p class="text-center text-base leading-6 font-medium text-gray-500">
+          <time> {{ date | readableDate }} </time>
+        </p>
+        <p class="text-base leading-6 text-4xl text-gray-700">
+          {{description}}
+        </p>
+      </div>
+      <article class="prose lg:prose-xl my-4 mx-auto">
+        {{ content | safe }}
+      </article>
+    </div>
+    {% include "./partials/footer.html" %}
+
+    <script src="/static/js/alpine.js"></script>
+
+    {% if path == "home" %}
+    <!-- Netlify Identity Widget -->
+    <!-- Needed only if you are using Netlify Identity feature -->
+    <script
+      type="text/javascript"
+      src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+    ></script>
+    {% endif %}
+  </body>
+</html>
