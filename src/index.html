@@ -6,9 +6,11 @@ path: home
 ---
 
 <div
-  class="container mx-auto lg:h-screen flex flex-col justify-center items-center px-4 mb-24"
+  class="container mx-auto flex flex-col justify-center items-center px-4 mb-24"
 >
-  <h1>
+  <img src="{{settings.profile_image}}" alt="Jackie Halpern" />
+
+  <h1 class="mt-16">
     <strong
       class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500"
     >
@@ -16,7 +18,7 @@ path: home
     </strong>
   </h1>
 
-  <p class="pt-4 pb-4">{{settings.description}}</p>
+  <p class="pt-8 pb-8 text-xl">{{settings.description}}</p>
 
   <section class="container mt-15 w-full grid grid-cols-1 lg:grid-cols-3 gap-4">
     {% set postslist = collections.post %} {% for post in postslist | reverse %}
