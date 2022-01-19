@@ -5,4 +5,6 @@ description: |-
 
   ## Meow!
 photo: /static/img/booshie.png
+thumbnail: /static/img/booshie.png
+Photo: /static/img/milo.jpg
 ---
