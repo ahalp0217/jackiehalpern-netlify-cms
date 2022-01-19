@@ -1,0 +1,23 @@
+---
+layout: default
+prism: true
+---
+
+<div class="container max-w-4xl mt-6 px-6">
+  <div class="pb-5 mb-5">
+    <h1 class="font-bold text-5xl">{{name}}</h1>
+    <div class="flex items-center">
+      <a
+        href="/"
+        class="text-white font-bold text-md bg-indigo-500 p-2 pl-4 pr-4 rounded-md"
+        >GO BACK
+      </a>
+    </div>
+    <img
+      src="{{thumbnail}}"
+      alt="{{post.data.title}}"
+      class="object-cover pt-4 pb-4"
+    />
+    <p class="text-base leading-6 text-4xl text-gray-500">{{description}}</p>
+  </div>
+</div>

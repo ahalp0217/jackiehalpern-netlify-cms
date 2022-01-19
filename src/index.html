@@ -8,9 +8,13 @@ path: home
 <div
   class="container mx-auto flex flex-col justify-center items-center px-4 mb-24"
 >
-  <img src="{{settings.profile_image}}" alt="Jackie Halpern" />
+  <img
+    src="{{settings.profile_image}}"
+    class="rounded-full border-indigo-500 border-2 mt-16 mb-8 h-48 w-48"
+    alt="Jackie Halpern"
+  />
 
-  <h1 class="mt-16">
+  <h1>
     <strong
       class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500"
     >
@@ -18,9 +22,9 @@ path: home
     </strong>
   </h1>
 
-  <p class="pt-8 pb-8 text-xl">{{settings.description}}</p>
+  <p class="pt-4 pb-8 text-xl">{{settings.description}}</p>
 
-  <section class="container mt-15 w-full grid grid-cols-1 lg:grid-cols-3 gap-4">
+  <section class="container mt-15 w-full grid grid-cols-1 lg:grid-cols-4 gap-4">
     {% set postslist = collections.post %} {% for post in postslist | reverse %}
     <div
       class="bg-gray-50 rounded-md shadow-md transform transition duration-200 ease-in-out hover:scale-105"

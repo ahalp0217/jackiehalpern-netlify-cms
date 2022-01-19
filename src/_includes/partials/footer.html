@@ -3,22 +3,12 @@
 >
 
 <div class="flex justify-center pb-4">
-    <img
-      src="/static/img/chloe.png "
-      class="rounded-full w-16 h-16 mx-2 object-cover"
+    {% set catslist = collections.cats %} {% for cat in catslist | reverse %}
+        <img
+        src="{{cat.photo}}"
+        class="rounded-full w-16 h-16 mx-2 object-cover"
     />
-    <img
-      src="/static/img/belle.png"
-      class="rounded-full w-16 h-16 mx-2 object-cover"
-    />
-    <img
-      src="/static/img/charbar.png"
-      class="rounded-full w-16 h-16 mx-2 object-cover"
-    />
-    <img
-      src="/static/img/booshie.png"
-      class="rounded-full w-16 h-16 mx-2 object-cover"
-    />
+    {% endfor %}
   </div>
   <small class="text-gray-500"></small>
     Follow me on 

@@ -44,10 +44,27 @@ collections:
         file: "src/_data/settings.yaml"
         fields:
           - { label: Title, name: title, widget: string }
-          - { label: Description, name: description, widget: string }
+          - { label: Description, name: description, widget: text }
           - {
               label: "Profile Image",
               name: "profile_image",
+              widget: "image",
+              choose_url: false,
+            }
+  - label: "Cat"
+    name: "cat"
+    editor:
+      preview: false
+    files:
+      - label: "Cats"
+        name: "cats"
+        file: "src/_data/cats.yaml"
+        fields:
+          - { label: Name, name: title, widget: string }
+          - { label: Description, name: description, widget: markdown }
+          - {
+              label: "Photo",
+              name: "photo",
               widget: "image",
               choose_url: false,
             }
