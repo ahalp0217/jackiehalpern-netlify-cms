@@ -59,11 +59,11 @@ collections:
       preview: false
     fields:
       - { label: "Name", name: "title", widget: "string" }
-      - { label: "Name", name: "description", widget: "markdown" }
+      - { label: "Name", name: "description", widget: "text" }
       - {
           label: "Thumbnail",
           name: "thumbnail",
           widget: "image",
           choose_url: false,
         }
-      - { label: "Photo", name: "Photo", widget: "image", choose_url: false }
+      - { label: "Photo", name: "photo", widget: "image", choose_url: false }
