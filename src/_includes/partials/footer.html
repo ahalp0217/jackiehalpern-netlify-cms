@@ -2,8 +2,16 @@
   class="{{ 'fixed' if path == 'home' }} text-center py-4 w-full bg-white border-t border-gray-100"
 >
 
+<<<<<<< HEAD
 <div class="flex justify-center pb-4">
     {% set catslist = collections.cats %} {% for cat in catslist | reverse %}
+=======
+<div class="flex justify-center pb-4">.
+ 
+    {% set catslist = collections.cats %} {% for cat in catslist | reverse %}
+    <h1>hello</h1>
+
+>>>>>>> Add cats
         <img
         src="{{cat.photo}}"
         class="rounded-full w-16 h-16 mx-2 object-cover"

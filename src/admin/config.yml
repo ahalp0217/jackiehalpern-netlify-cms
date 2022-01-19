@@ -53,18 +53,11 @@ collections:
             }
   - label: "Cat"
     name: "cat"
+    folder: "src/cats"
+    create: true
     editor:
       preview: false
-    files:
-      - label: "Cats"
-        name: "cats"
-        file: "src/_data/cats.yaml"
-        fields:
-          - { label: Name, name: title, widget: string }
-          - { label: Description, name: description, widget: markdown }
-          - {
-              label: "Photo",
-              name: "photo",
-              widget: "image",
-              choose_url: false,
-            }
+    fields:
+      - { label: "Name", name: "title", widget: "string" }
+      - { label: "Name", name: "description", widget: "markdown" }
+      - { label: "Photo", name: "photo", widget: "image", choose_url: false }
