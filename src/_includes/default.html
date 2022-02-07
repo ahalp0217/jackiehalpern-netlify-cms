@@ -18,6 +18,20 @@
     {% endif %}
 
     <meta property="og:image" content="/static/img/2_dogs-2.jpg" />
+
+    <!-- Panelbear -->
+    <script
+      async
+      src="https://cdn.panelbear.com/analytics.js?site=5LAreQZqo8I"
+    ></script>
+    <script>
+      window.panelbear =
+        window.panelbear ||
+        function () {
+          (window.panelbear.q = window.panelbear.q || []).push(arguments);
+        };
+      panelbear("config", { site: "5LAreQZqo8I" });
+    </script>
   </head>
   <body>
     {% include "./partials/navbar.html" %} {{ content | safe }} {% include
