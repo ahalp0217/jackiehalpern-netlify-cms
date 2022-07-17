@@ -1,5 +1,5 @@
 ---
-title: "# 6 Can Never Have Enough T Shirt Quilts"
+title: "Can Never Have Enough T Shirt Quilts"
 description: T Shirts
 date: 2022-01-21T03:06:30.945Z
 thumbnail: /static/img/second-t-shirt.jpg

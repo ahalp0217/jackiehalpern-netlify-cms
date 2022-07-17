@@ -14,7 +14,7 @@ path: home
     alt="Jackie Halpern"
   />
 
-  <h1>
+  <h1 class="w-full">
     <strong
       class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500"
     >
@@ -41,7 +41,10 @@ path: home
             %}
           </h2>
           <p class="text-base leading-6 text-gray-500 mb-3">
-            <time> {{ post.date | readableDate }} </time>
+            <time class="float-right"> {{ post.date | readableDate }} </time>
+          </p>
+          <p class="text-base leading-6 text-indigo-400 mb-3">
+            <b>{{loop.revindex}}</b>
           </p>
         </div>
       </a>
