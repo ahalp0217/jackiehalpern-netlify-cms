@@ -46,11 +46,13 @@
             >View All Quilts
           </a>
         </div>
-        <img
-          src="{{thumbnail}}"
-          alt="{{post.data.title}}"
-          class="object-cover pt-4 pb-4"
-        />
+        <div class="bg-gray-300 m-auto h-196 flex justify-center my-4">
+          <img
+            src="{{thumbnail}}"
+            alt="{{post.data.title}}"
+            class="object-cover h-full"
+          />
+        </div>
         <p class="text-base leading-6 font-medium text-gray-500">
           <time> {{ date | readableDate }} </time>
         </p>
