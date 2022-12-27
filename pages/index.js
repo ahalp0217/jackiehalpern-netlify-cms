@@ -1,6 +1,8 @@
 import Head from "next/head";
 import { Inter } from "@next/font/google";
-import styles from "../styles/Home.module.css";
+import { useState, useEffect } from "react";
+
+import { motion, AnimatePresence } from "framer-motion";
 
 import fs from "fs";
 import matter from "gray-matter";
@@ -24,6 +26,7 @@ import {
   StatGroup,
   Card,
   CardBody,
+  Input,
 } from "@chakra-ui/react";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -34,11 +37,18 @@ const getDateString = (date) => {
 };
 
 export default function Home({ quilts, cats }) {
-  const quiltsSorted = quilts.sort(function (a, b) {
-    // Turn your strings into dates, and then subtract them
-    // to get a value that is either negative, positive, or zero.
-    return new Date(b.date) - new Date(a.date);
-  });
+  const [displayQuilts, setDisplayQuilts] = useState(quilts);
+  const [searchTerm, setSearchTerm] = useState("");
+
+  useEffect(() => {
+    const newQuilts = quilts.filter((value) =>
+      value.title
+        .concat(value.description)
+        .toLowerCase()
+        .includes(searchTerm.toLowerCase())
+    );
+    setDisplayQuilts(newQuilts);
+  }, [searchTerm]);
 
   return (
     <>
@@ -64,7 +74,7 @@ export default function Home({ quilts, cats }) {
           </AspectRatio>
           <Box display="flex" justifyContent="center" gap={4}>
             {cats.map((cat, i) => (
-              <Link href={`cat/${cat.slug}`}>
+              <Link href={`cat/${cat.slug}`} key={i}>
                 <Avatar
                   size="lg"
                   src={cat.thumbnail}
@@ -127,61 +137,84 @@ export default function Home({ quilts, cats }) {
           >
             See My Latest Creations
           </Heading>
+
+          <Input
+            placeholder="Search for Baby, Flower, or Cat"
+            size="lg"
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+
           <SimpleGrid columns={{ base: 1, lg: 3 }} spacing={6} py="16px">
-            {quiltsSorted.map((quilt, i) => (
-              <Link href={`/quilt/${quilt.slug}`}>
-                <Box
-                  position="relative"
-                  transition="all ease .2s"
-                  filter="brightness(90%)"
-                  _hover={{
-                    transform: "translateY(-4px) scale(1.02)",
-                    boxShadow: "lg",
-                    filter: "brightness(115%)",
-                  }}
+            {displayQuilts.map((quilt, i) => (
+              <AnimatePresence>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
                 >
-                  <AspectRatio ratio={1}>
-                    <Image
-                      src={quilt.thumbnail}
-                      objectFit="cover"
-                      borderRadius="lg"
-                    />
-                  </AspectRatio>
-                  <Box
-                    bgGradient="linear(to-b, rgba(0,0,0, 0), rgba(0,0,0.10))"
-                    position="absolute"
-                    bottom="0"
-                    width="100%"
-                    p="32px"
-                    pt="64px"
-                    color="#fff"
-                    borderRadius="lg"
-                    boxShadow="lg"
-                  >
-                    <Heading size="lg" noOfLines={1}>
-                      {quilt.title.toUpperCase()}
-                    </Heading>
-                    <Heading size="sm" color="gray.400" noOfLines={1}>
-                      {quilt.description}
-                    </Heading>
-                  </Box>
-                  <Box
-                    position="absolute"
-                    top="12px"
-                    right="12px"
-                    display="flex"
-                    gap="2"
-                    justifyContent="around"
-                  >
-                    <Badge bgColor="rgba(0,0,0,.7)" color="#fff" fontSize="1em">
-                      #{quiltsSorted.length - i}
-                    </Badge>
-                    <Badge bgColor="rgba(0,0,0,.7)" color="#fff" fontSize="1em">
-                      {getDateString(quilt.date)}
-                    </Badge>
-                  </Box>
-                </Box>
-              </Link>
+                  <Link href={`/quilt/${quilt.slug}`} key={i}>
+                    <Box
+                      position="relative"
+                      transition="all ease .2s"
+                      filter="brightness(90%)"
+                      _hover={{
+                        transform: "translateY(-4px) scale(1.02)",
+                        boxShadow: "lg",
+                        filter: "brightness(115%)",
+                      }}
+                    >
+                      <AspectRatio ratio={1}>
+                        <Image
+                          src={quilt.thumbnail}
+                          objectFit="cover"
+                          borderRadius="lg"
+                        />
+                      </AspectRatio>
+                      <Box
+                        bgGradient="linear(to-b, rgba(0,0,0, 0), rgba(0,0,0.10))"
+                        position="absolute"
+                        bottom="0"
+                        width="100%"
+                        p="32px"
+                        pt="64px"
+                        color="#fff"
+                        borderRadius="lg"
+                        boxShadow="lg"
+                      >
+                        <Heading size="lg" noOfLines={1}>
+                          {quilt.title.toUpperCase()}
+                        </Heading>
+                        <Heading size="sm" color="gray.400" noOfLines={1}>
+                          {quilt.description}
+                        </Heading>
+                      </Box>
+                      <Box
+                        position="absolute"
+                        top="12px"
+                        right="12px"
+                        display="flex"
+                        gap="2"
+                        justifyContent="around"
+                      >
+                        <Badge
+                          bgColor="rgba(0,0,0,.7)"
+                          color="#fff"
+                          fontSize="1em"
+                        >
+                          #{quilts.length - i}
+                        </Badge>
+                        <Badge
+                          bgColor="rgba(0,0,0,.7)"
+                          color="#fff"
+                          fontSize="1em"
+                        >
+                          {getDateString(quilt.date)}
+                        </Badge>
+                      </Box>
+                    </Box>
+                  </Link>
+                </motion.div>
+              </AnimatePresence>
             ))}
           </SimpleGrid>
         </Container>
@@ -195,7 +228,7 @@ export async function getStaticProps() {
   const filesInQuilts = fs.readdirSync("./content/quilts");
 
   // Get the front matter and slug (the filename without .md) of all files
-  const quilts = filesInQuilts.map((filename) => {
+  let quilts = filesInQuilts.map((filename) => {
     const file = fs.readFileSync(`./content/quilts/${filename}`, "utf8");
     const matterData = matter(file);
 
@@ -219,6 +252,12 @@ export async function getStaticProps() {
       ...matterData.data, // matterData.data contains front matter
       slug: filename.slice(0, filename.indexOf(".")),
     };
+  });
+
+  quilts = quilts.sort(function (a, b) {
+    // Turn your strings into dates, and then subtract them
+    // to get a value that is either negative, positive, or zero.
+    return new Date(b.date) - new Date(a.date);
   });
 
   return {
