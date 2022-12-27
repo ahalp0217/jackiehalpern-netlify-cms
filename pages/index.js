@@ -54,7 +54,7 @@ export default function Home({ quilts, cats }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Container maxW={{ base: "100%", lg: "1400px" }} py="48px">
+        <Container maxW={{ base: "95%", lg: "1400px" }} py="48px">
           <AspectRatio ratio={1} width="250px" margin="auto" my="16px">
             <Image
               borderRadius="1000px"
@@ -71,7 +71,7 @@ export default function Home({ quilts, cats }) {
                   filter="grayscale(.5)"
                   transition="all ease .2s"
                   _hover={{
-                    filter: "grayscale(1)",
+                    filter: "grayscale(0)",
                     transform: "scale(1.1)",
                     cursor: "pointer",
                   }}
@@ -80,7 +80,7 @@ export default function Home({ quilts, cats }) {
             ))}
           </Box>
 
-          <SimpleGrid columns={3} spacing={6} py="32px">
+          <SimpleGrid columns={{ base: 1, lg: 3 }} spacing={6} py="32px">
             <Card bgColor="purple.600" color="#fff">
               <CardBody>
                 <StatGroup>

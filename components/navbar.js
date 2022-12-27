@@ -1,4 +1,4 @@
-import { Avatar, Image, Box, Container, Link } from "@chakra-ui/react";
+import { Box, Container, Link } from "@chakra-ui/react";
 
 export default function Navbar() {
   return (
@@ -20,7 +20,7 @@ export default function Navbar() {
         >
           <Link
             href="/"
-            fontSize="3xl"
+            fontSize={{ base: "xl", lg: "3xl" }}
             fontWeight="bold"
             bgGradient="linear(to-r, blue.500, pink.600)"
             bgClip="text"
