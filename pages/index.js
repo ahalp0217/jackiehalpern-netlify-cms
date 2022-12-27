@@ -110,7 +110,7 @@ export default function Home({ quilts, cats }) {
                 <StatGroup>
                   <Stat>
                     <StatLabel>Quilts Created</StatLabel>
-                    <StatNumber>110 </StatNumber>
+                    <StatNumber>115 </StatNumber>
                     <StatHelpText>Self Taught Passion & Hobby</StatHelpText>
                   </Stat>
                 </StatGroup>
