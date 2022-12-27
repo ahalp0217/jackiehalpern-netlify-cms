@@ -7,7 +7,6 @@ import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/style.css";
 
 export default function Quilt({ data }) {
-  console.log(data);
   const [isOpen, setIsOpen] = useState(false);
 
   return (

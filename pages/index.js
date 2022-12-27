@@ -40,8 +40,6 @@ export default function Home({ quilts, cats }) {
     return new Date(b.date) - new Date(a.date);
   });
 
-  console.log(cats);
-
   return (
     <>
       <Head>
@@ -200,7 +198,6 @@ export async function getStaticProps() {
   const quilts = filesInQuilts.map((filename) => {
     const file = fs.readFileSync(`./content/quilts/${filename}`, "utf8");
     const matterData = matter(file);
-    console.log(matterData);
 
     // Make sure new entries can interpret date object https://www.netlifycms.org/docs/widgets/date/#datetime
     matterData.data.date = matterData.data.date.toString();

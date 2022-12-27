@@ -5,8 +5,6 @@ import matter from "gray-matter";
 import Head from "next/head";
 
 export default function Cat({ data }) {
-  console.log(data);
-
   return (
     <div>
       <Head>
