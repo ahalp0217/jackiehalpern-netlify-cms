@@ -1,6 +1,6 @@
 backend:
   # Use netlify identity as backend
-  name: test-repo
+  name: git-gateway
   branch: master
   ### enable below lines for github integration ###
   # name: github
@@ -13,7 +13,7 @@ local_backend: true
 # publish_mode: editorial_workflow
 collections:
   - label: "Quilt"
-    name: "blog"
+    name: "quilt"
     folder: "content/quilts"
     create: true
     editor:
