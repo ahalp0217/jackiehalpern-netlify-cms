@@ -110,7 +110,7 @@ export default function Home({ quilts, cats }) {
                 <StatGroup>
                   <Stat>
                     <StatLabel>Quilts Created</StatLabel>
-                    <StatNumber>115 </StatNumber>
+                    <StatNumber>{quilts.length + 43} </StatNumber>
                     <StatHelpText>Self Taught Passion & Hobby</StatHelpText>
                   </Stat>
                 </StatGroup>
@@ -146,13 +146,13 @@ export default function Home({ quilts, cats }) {
 
           <SimpleGrid columns={{ base: 1, lg: 3 }} spacing={6} py="16px">
             {displayQuilts.map((quilt, i) => (
-              <AnimatePresence>
+              <AnimatePresence key={i}>
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                 >
-                  <Link href={`/quilt/${quilt.slug}`} key={i}>
+                  <Link href={`/quilt/${quilt.slug}`}>
                     <Box
                       position="relative"
                       transition="all ease .2s"
@@ -165,7 +165,10 @@ export default function Home({ quilts, cats }) {
                     >
                       <AspectRatio ratio={1}>
                         <Image
-                          src={quilt.thumbnail}
+                          src={quilt.thumbnail.replace(
+                            "/images",
+                            "/imagesOptimized"
+                          )}
                           objectFit="cover"
                           borderRadius="lg"
                         />

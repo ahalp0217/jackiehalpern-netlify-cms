@@ -64,6 +64,7 @@ export async function getStaticProps({ params: { slug } }) {
     fs.readFileSync(`./content/quilts/${slug}.md`, "utf8")
   );
   let data = fileContent.data;
+  data.date = data.date.toString();
 
   return {
     props: { data },
