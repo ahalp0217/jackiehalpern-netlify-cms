@@ -33,13 +33,13 @@ export default function Blog({ data, content }) {
             flexDir="column"
           >
             <Text>{getDateString(data.date)}</Text>
-            <Heading lineHeight={0.5} fontWeight="extrabold">
+            <Heading lineHeight={1} fontWeight="extrabold">
               {data.title}
             </Heading>
 
             <hr />
 
-            <Box lineHeight={1} py="4">
+            <Box lineHeight={1.2} py="4">
               <ReactMarkdown
                 components={ChakraUIRenderer()}
                 children={content}
