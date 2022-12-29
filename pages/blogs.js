@@ -74,7 +74,10 @@ export default function Blogs({ blogs }) {
                   <Image
                     objectFit="cover"
                     maxW={{ base: "100%", sm: "200px" }}
-                    src={blog.thumbnail}
+                    src={blog.thumbnail.replace(
+                      "/images/",
+                      "/imagesOptimized/"
+                    )}
                     alt=""
                   />
 

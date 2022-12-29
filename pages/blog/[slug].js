@@ -32,6 +32,13 @@ export default function Blog({ data, content }) {
             gap="16px"
             flexDir="column"
           >
+            <Image
+              objectFit="cover"
+              maxW={{ base: "100%", md: "25%" }}
+              borderRadius="md"
+              src={data.thumbnail.replace("/images/", "/imagesOptimized/")}
+              alt=""
+            />
             <Text>{getDateString(data.date)}</Text>
             <Heading lineHeight={1} fontWeight="extrabold">
               {data.title}
@@ -39,7 +46,7 @@ export default function Blog({ data, content }) {
 
             <hr />
 
-            <Box lineHeight={1.2} py="4">
+            <Box lineHeight={1.5} py="4">
               <ReactMarkdown
                 components={ChakraUIRenderer()}
                 children={content}
