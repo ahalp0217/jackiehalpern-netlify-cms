@@ -14,7 +14,6 @@ const getDateString = (date) => {
 
 /* Data is everything but the blog post content stuff. I.e. just the meta data */
 export default function Blog({ data, content }) {
-  console.log(data);
   return (
     <div>
       <Head>
@@ -64,7 +63,6 @@ export async function getStaticProps({ params: { slug } }) {
   const fileContent = matter(
     fs.readFileSync(`./content/blogs/${slug}.md`, "utf8")
   );
-  console.log(fileContent);
   let data = fileContent.data;
   data.date = data.date.toString();
   const content = fileContent.content;

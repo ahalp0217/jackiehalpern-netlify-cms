@@ -23,7 +23,6 @@ const getDateString = (date) => {
 };
 
 export default function Blogs({ blogs }) {
-  console.log(blogs);
   return (
     <div>
       <Head>
