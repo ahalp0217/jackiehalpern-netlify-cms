@@ -68,3 +68,14 @@ collections:
           choose_url: false,
         }
       - { label: "Photo", name: "photo", widget: "image", choose_url: false }
+  - label: "Blog"
+    name: "blog"
+    folder: "content/blogs"
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: title, name: title, widget: "string", choose_url: false }
+      - { label: thumbnail, name: thumbnail, widget: image }
+      - { label: "Blog Post Content", name: "body", widget: "markdown" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }

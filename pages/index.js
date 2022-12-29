@@ -10,6 +10,7 @@ import Link from "next/link";
 import {
   Avatar,
   AspectRatio,
+  Button,
   Center,
   Badge,
   Image,
@@ -27,6 +28,7 @@ import {
   Card,
   CardBody,
   Input,
+  Highlight,
 } from "@chakra-ui/react";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -58,14 +60,14 @@ export default function Home({ quilts, cats }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           property="og:image"
-          src="/images/screen-shot-2022-01-20-at-10.15.17-pm.png"
+          src="/imagesOptimized/screen-shot-2022-01-20-at-10.15.17-pm.png"
         />
 
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
         <Container maxW={{ base: "95%", lg: "1400px" }} py="48px">
-          <AspectRatio ratio={1} width="250px" margin="auto" my="16px">
+          <AspectRatio ratio={1} width="250px" margin="auto" mb="24px">
             <Image
               borderRadius="1000px"
               src="/images/screen-shot-2022-01-20-at-10.15.17-pm.png"
@@ -78,7 +80,7 @@ export default function Home({ quilts, cats }) {
                 <Avatar
                   size="lg"
                   src={cat.thumbnail}
-                  filter="grayscale(.5)"
+                  filter="grayscale(.7)"
                   transition="all ease .2s"
                   _hover={{
                     filter: "grayscale(0)",
@@ -128,6 +130,26 @@ export default function Home({ quilts, cats }) {
               </CardBody>
             </Card>
           </SimpleGrid>
+
+          <Box display="flex" justifyContent="center" py="4">
+            <Button
+              onClick={() => (window.location = "/blogs")}
+              size="lg"
+              colorScheme="purple"
+              variant="outline"
+            >
+              READ MY BLOG
+              <Badge
+                colorScheme="purple"
+                position="absolute"
+                top="-2"
+                right="0"
+                borderRadius="full"
+              >
+                New
+              </Badge>
+            </Button>
+          </Box>
 
           <Heading
             size="2xl"
