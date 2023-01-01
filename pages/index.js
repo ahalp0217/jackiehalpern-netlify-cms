@@ -161,7 +161,7 @@ export default function Home({ quilts, cats }) {
           </Heading>
 
           <Input
-            placeholder="Search for Baby, Flower, or Cat"
+            placeholder="Search here. (e. g. baby, flower, or cat)"
             size="lg"
             onChange={(e) => setSearchTerm(e.target.value)}
           />
