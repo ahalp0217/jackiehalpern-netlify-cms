@@ -5,7 +5,7 @@ date: 2023-01-02T14:29:08.594Z
 ---
 M﻿y top favorites shops and websites related to **quilting**. Here they are:
 
-1﻿. **[Hancocks-paducah](https://www.hancocks-paducah.com/)** has a great selection of fabrics, batiks.  I also order their aurifil threads. 
+1﻿. [hancocks-paducah.com](hancocks-paducah.com)
 
 2﻿. [**Sewright Sewing Store**,](https://www.sewright.com/) Bayside, New York
 
