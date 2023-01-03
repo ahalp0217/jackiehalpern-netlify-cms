@@ -9,7 +9,7 @@ M﻿y top favorites shops and websites related to **quilting**. Here they are:
 
 2﻿. [**Sewright Sewing Store**,](https://www.sewright.com/) Bayside, New York
 
-3﻿. **[Keepsakequilting](https://www.keepsakequilting.com/)**
+3﻿. **[Keepsakequilting](https://www.keepsakequilting.com/)** 
 
 4﻿. **[Kalindiquilts](https://www.kalindiquilts.com/)** in Pune, India.  They will ship from India, I know it's costly, but their hand dyed fabrics are gorgeous! They sell them also on Etsy.
 
@@ -21,6 +21,6 @@ M﻿y top favorites shops and websites related to **quilting**. Here they are:
 
 8﻿. **[Moodfabrics](https://www.moodfabrics.com/)**  A great resource for all things fabric related.  I purchased lots of denim from this online site.  They also have a huge store in Manhattan that is open to the public.  
 
-9﻿.** [Etsy](https://www.etsy.com/)** Shout out to this website for its commitment to all things made by these companies. I often look for quilting fabric here.
+9﻿. **[Etsy](https://www.etsy.com/)** Shout out to this website for its commitment to all things made by these companies. I often look for quilting fabric here.
 
 1﻿0. **[Roxannequilts](https://www.roxannequilts.com/)**  On several visits to Carpenteria, California I visited this adorable store filled with lots of fabric and small notions surprises.
