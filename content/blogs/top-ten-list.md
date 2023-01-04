@@ -17,10 +17,10 @@ M﻿y top favorites shops and websites related to **quilting**. Here they are:
 
 6﻿. Bernina has it’s own website that offers amazing webinars and classes. I also order Isocord embroidery thread here. I love this thread for embroidering on my Bernina 880 series  machine.  <https://www.bernina.com/en-US/Home-United-States>
 
-7﻿. [missouriquiltco.com](missouriquiltco.com) Jenny has produced an enormous amount of incredible tutorials related to quilting. She sells a big line of fabric, too. 
+7﻿. [](missouriquiltco.com)Jenny has produced an enormous amount of incredible tutorials related to quilting. She sells a big line of fabric, too. She is known world-wide and is so personable when you meet her. <https://www.missouriquiltco.com/>
 
-8﻿. [moodfabrics.com](moodfabrics.com) A great resource for all things fabric related.  I purchased lots of denim from this online site.  They also have a huge store in Manhattan that is open to the public.  
+8﻿. A great resource for all things fabric related.  I purchased lots of denim from this online site.  They also have a huge store in Manhattan that is open to the public. [ https://tinyurl.com/MoodFabric](< https://tinyurl.com/MoodFabric>)
 
-9﻿. [etsy.com](etsy.com)
+9﻿. I love the Etsy website and supporting smaller businesses is wonderful. <https://tinyurl.com/Etsyforallthingshomemade>
 
-1﻿0. [roxannequilts.com](roxannequilts.com)  On several visits to Carpenteria, California I visited this adorable store filled with lots of fabric and small notions surprises.
+1﻿0. Roxanne's Quilt Shop in Carpenteria, California. I had the pleasure of shopping at this store many times on my trip to the West Coast. <https://www.roxannequilts.com/>[](roxannequilts.com)
