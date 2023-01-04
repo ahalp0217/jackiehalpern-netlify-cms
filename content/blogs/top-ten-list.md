@@ -11,7 +11,7 @@ M﻿y top favorites shops and websites related to **quilting**. Here they are:
 
 3﻿. I personally visited Keepsake Quilting in New Hampshire.  A big, well stocked store that also does mail order. <https://www.keepsakequilting.com/>[](keepsakequilting.com)[](https://www.keepsakequilting.com/)
 
-4﻿. [](kalindiquilts.com)https://www.etsy.com/shop/KALINDIQUILTS  They will ship from India, and Ohio, and their hand-dyed fabrics are so great to sew with. I met this nice company at the International Quilt Festival in Houston, Texas in 2022.
+4﻿. Kalindi Quilts will ship from India, and Ohio through Etsy. Their hand-dyed fabrics are great to sew with. Love their assortment of color choice.I met this nice company at the International Quilt Festival in Houston, Texas in 2022. Here’s a link to the etsy website that I used.  <https://www.etsy.com/shop/KALINDIQUILTS>
 
 5﻿. [](sewbatik.com)<https://sewbatik.com/> has a beautiful selection of batiks.  I've used their fabrics many times and they wash well. 
 
