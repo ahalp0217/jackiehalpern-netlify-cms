@@ -15,7 +15,7 @@ M﻿y top favorites shops and websites related to **quilting**. Here they are:
 
 5﻿. [](sewbatik.com)<https://sewbatik.com/> has a beautiful selection of batiks.  I've used their fabrics many times and they wash well. 
 
-6﻿. [bernina.com](bernina.com)website offers amazing webinars, classes and I also order Isocord embroidery thread here. I love this thread for embroidering on an 880 machine. 
+6﻿. Bernina has it’s own website that offers amazing webinars and classes. I also order Isocord embroidery thread here. I love this thread for embroidering on my Bernina 880 series  machine.  <https://www.bernina.com/en-US/Home-United-States>
 
 7﻿. [missouriquiltco.com](missouriquiltco.com) Jenny has produced an enormous amount of incredible tutorials related to quilting. She sells a big line of fabric, too. 
 
