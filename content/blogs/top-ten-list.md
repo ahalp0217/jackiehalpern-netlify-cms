@@ -5,7 +5,7 @@ date: 2023-01-02T14:29:08.594Z
 ---
 M﻿y top favorites shops and websites related to **quilting**. Here they are:
 
-1﻿. Hancock of Paducah carries beautiful line of quality fabrics.  https://www.hancocks-paducah.com/?gclid=CjwKCAiAwc-dBhA7EiwAxPRylIViB3ePKAzdZAD-gB8GAMz8VEX0zV61F03O
+1﻿. Hancock of Paducah carries beautiful line of quality fabrics. <https://tinyurl.com/2p9fmfnw>
 
 2﻿.  For all my sewing needs related to my machine and for beautiful batiks I visit Sew Right Sewing machines in Bayside, New York.  I have been a happy customer for over 30 years at this store. <https://www.sewright.com/>
 
