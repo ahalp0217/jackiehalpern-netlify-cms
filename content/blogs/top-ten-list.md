@@ -5,11 +5,11 @@ date: 2023-01-02T14:29:08.594Z
 ---
 M﻿y top favorites shops and websites related to **quilting**. Here they are:
 
-1﻿. [hancocks-paducah.com](hancocks-paducah.com)
+1﻿. Hancock of Paducah carries beautiful line of quality fabrics.  https://www.hancocks-paducah.com/?gclid=CjwKCAiAwc-dBhA7EiwAxPRylIViB3ePKAzdZAD-gB8GAMz8VEX0zV61F03O
 
-2﻿. [sewright.com](sewright.com)
+2﻿.  For all my sewing needs related to my machine and for beautiful batiks I visit Sew Right Sewing machines in Bayside, New York.  I have been a happy customer for over 30 years at this store. <https://www.sewright.com/>
 
-3﻿. [keepsakequilting.com](keepsakequilting.com)
+3﻿. I personally visited Keepsake Quilting in New Hampshire.  A big, well stocked store that also does mail order. <https://www.keepsakequilting.com/>[](keepsakequilting.com)[](https://www.keepsakequilting.com/)
 
 4﻿. [kalindiquilts.com](kalindiquilts.com) in Pune, India.  They will ship from India, and Ohio, and their hand-dyed fabrics are so great to sew with. I met this nice company at the International Quilt Festival in Houston, Texas in 2022.
 
