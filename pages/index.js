@@ -131,26 +131,6 @@ export default function Home({ quilts, cats }) {
             </Card>
           </SimpleGrid>
 
-          <Box display="flex" justifyContent="center" py="4">
-            <Button
-              onClick={() => (window.location = "/blogs")}
-              size="lg"
-              colorScheme="purple"
-              variant="outline"
-            >
-              READ MY BLOG
-              <Badge
-                colorScheme="purple"
-                position="absolute"
-                top="-2"
-                right="0"
-                borderRadius="full"
-              >
-                New
-              </Badge>
-            </Button>
-          </Box>
-
           <Heading
             size="2xl"
             bgGradient="linear(to-r, pink.500, blue.600)"
